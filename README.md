@@ -322,3 +322,4 @@ Example test cases include:
 - Users never receive private product data
 - Statistics are cached and invalidated on write operations
 - Environment variables are injected at runtime and not committed to the repository
+- Database indexes are defined for frequently queried fields such as `sku` (unique) and `category` to improve query performance

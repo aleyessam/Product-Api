@@ -46,4 +46,16 @@ describe("Products API – RBAC & validation", () => {
     expect(response.body.success).toBe(true);
     expect(response.body.data.sku).toBe(TEST_SKU);
   });
+
+  it("should allow admin to retrieve product statistics", async () => {
+    const response = await request(app)
+      .get("/api/products/stats")
+      .set("X-User-Role", "admin");
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.success).toBe(true);
+    expect(response.body.data).toHaveProperty("totalProducts");
+    expect(response.body.data).toHaveProperty("totalInventoryValue");
+    expect(response.body.data).toHaveProperty("averagePrice");
+  });
 });

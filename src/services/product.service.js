@@ -74,6 +74,8 @@ const getProductStats = async () => {
     totalProducts,
     totalInventoryValue,
     totalDiscountedValue,
+    // averagePrice represents the average price per product,
+    // not weighted by quantity, as defined in the task specification
     averagePrice: totalProducts === 0 ? 0 : totalInventoryValue / totalProducts,
     outOfStockCount,
     productsByCategory: Object.entries(productsByCategory).map(
