@@ -1,0 +1,977 @@
+{
+  "info": {
+    "_postman_id": "a1ae25d1-7722-4ddc-89c0-dd3ae344e622",
+    "name": "Product-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://localhost:3000/api/product",
+      "id": "0cb59b45-1530-439a-851d-d3fabdecf594",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "admin",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/products",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "47d7be4a-a278-4306-b0c2-60677e144ffa",
+          "name": "http://localhost:3000/api/product",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "admin",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/products",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "99"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "900"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2251"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"8cb-sWfoTZNGOPgYwbiix2ylp3zaouY\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:25:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Products retrieved successfully\",\n    \"data\": [\n        {\n            \"_id\": \"694100602ee8bc75d84f0392\",\n            \"sku\": \"tEST-001\",\n            \"name\": \"Test Product\",\n            \"description\": \"Second product\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": 80,\n            \"quantity\": 10,\n            \"createdAt\": \"2025-12-16T06:46:56.809Z\",\n            \"updatedAt\": \"2025-12-16T20:38:29.681Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"694101418492150bc048bc21\",\n            \"sku\": \"TEST-002\",\n            \"name\": \"Tests Product\",\n            \"description\": \"First product\",\n            \"category\": \"Electronics\",\n            \"type\": \"private\",\n            \"price\": 100,\n            \"discountPrice\": 80,\n            \"quantity\": 10,\n            \"createdAt\": \"2025-12-16T06:50:41.990Z\",\n            \"updatedAt\": \"2025-12-17T00:03:06.272Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941c23dc5a14cf3673088ec\",\n            \"sku\": \"LAPTOP-001\",\n            \"name\": \"Gaming Laptop\",\n            \"description\": \"High-performance gaming laptop with RTX graphics\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 1200,\n            \"discountPrice\": 999,\n            \"quantity\": 10,\n            \"createdAt\": \"2025-12-16T20:34:05.272Z\",\n            \"updatedAt\": \"2025-12-16T20:34:05.272Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941c256c5a14cf3673088ee\",\n            \"sku\": \"INTERNAL-TOOL-01\",\n            \"name\": \"Internal Diagnostic Tool\",\n            \"description\": \"Used internally by technicians only\",\n            \"category\": \"Tools\",\n            \"type\": \"private\",\n            \"price\": 500,\n            \"discountPrice\": null,\n            \"quantity\": 3,\n            \"createdAt\": \"2025-12-16T20:34:30.993Z\",\n            \"updatedAt\": \"2025-12-16T20:34:30.993Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941c25fc5a14cf3673088f0\",\n            \"sku\": \"PHONE-123\",\n            \"name\": \"Smartphone Pro\",\n            \"description\": \"Latest smartphone model\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 800,\n            \"discountPrice\": null,\n            \"quantity\": 25,\n            \"createdAt\": \"2025-12-16T20:34:39.358Z\",\n            \"updatedAt\": \"2025-12-16T20:34:39.358Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941d566df5c72d00244a85e\",\n            \"sku\": \"XSS-001\",\n            \"name\": \"&lt;script&gt;alert('xss')&lt;/script&gt; Laptop\",\n            \"description\": \"<img src>\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": null,\n            \"quantity\": 1,\n            \"createdAt\": \"2025-12-16T21:55:50.993Z\",\n            \"updatedAt\": \"2025-12-16T21:55:50.993Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941dfbe0cb860c062ba3675\",\n            \"sku\": \"TEST-INT-001\",\n            \"name\": \"Integration Test Product\",\n            \"description\": null,\n            \"category\": \"Test\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": null,\n            \"quantity\": 1,\n            \"createdAt\": \"2025-12-16T22:39:58.645Z\",\n            \"updatedAt\": \"2025-12-16T22:39:58.645Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"totalItems\": 7,\n        \"itemsPerPage\": 10,\n        \"hasNextPage\": false,\n        \"hasPreviousPage\": false\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/products",
+      "id": "3c1a2094-716b-4c53-a056-6f119c6c0439",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "user",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Body",
+            "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "61c2695d-864b-4975-9eca-6d85025c7243",
+          "name": "http://localhost:3000/api/products",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "user",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Body",
+                "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "98"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "886"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1659"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67b-m+5SAlsxvg4chhrKgloC/l3Af9g\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:25:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Products retrieved successfully\",\n    \"data\": [\n        {\n            \"_id\": \"694100602ee8bc75d84f0392\",\n            \"sku\": \"tEST-001\",\n            \"name\": \"Test Product\",\n            \"description\": \"Second product\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": 80,\n            \"quantity\": 10,\n            \"createdAt\": \"2025-12-16T06:46:56.809Z\",\n            \"updatedAt\": \"2025-12-16T20:38:29.681Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941c23dc5a14cf3673088ec\",\n            \"sku\": \"LAPTOP-001\",\n            \"name\": \"Gaming Laptop\",\n            \"description\": \"High-performance gaming laptop with RTX graphics\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 1200,\n            \"discountPrice\": 999,\n            \"quantity\": 10,\n            \"createdAt\": \"2025-12-16T20:34:05.272Z\",\n            \"updatedAt\": \"2025-12-16T20:34:05.272Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941c25fc5a14cf3673088f0\",\n            \"sku\": \"PHONE-123\",\n            \"name\": \"Smartphone Pro\",\n            \"description\": \"Latest smartphone model\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 800,\n            \"discountPrice\": null,\n            \"quantity\": 25,\n            \"createdAt\": \"2025-12-16T20:34:39.358Z\",\n            \"updatedAt\": \"2025-12-16T20:34:39.358Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941d566df5c72d00244a85e\",\n            \"sku\": \"XSS-001\",\n            \"name\": \"&lt;script&gt;alert('xss')&lt;/script&gt; Laptop\",\n            \"description\": \"<img src>\",\n            \"category\": \"Electronics\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": null,\n            \"quantity\": 1,\n            \"createdAt\": \"2025-12-16T21:55:50.993Z\",\n            \"updatedAt\": \"2025-12-16T21:55:50.993Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6941dfbe0cb860c062ba3675\",\n            \"sku\": \"TEST-INT-001\",\n            \"name\": \"Integration Test Product\",\n            \"description\": null,\n            \"category\": \"Test\",\n            \"type\": \"public\",\n            \"price\": 100,\n            \"discountPrice\": null,\n            \"quantity\": 1,\n            \"createdAt\": \"2025-12-16T22:39:58.645Z\",\n            \"updatedAt\": \"2025-12-16T22:39:58.645Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"totalItems\": 5,\n        \"itemsPerPage\": 10,\n        \"hasNextPage\": false,\n        \"hasPreviousPage\": false\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/product",
+      "id": "574917d1-6930-4d81-ab21-cf6c6eb64ab7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "admin",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/stats",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "stats"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "cb7b6d95-0c33-43b4-8055-184dbc64f3ba",
+          "name": "http://localhost:3000/api/product",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "admin",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "stats"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "97"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "878"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "474"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1da-i6hGVNhIpfhhaIu10uZk3DAV8sk\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:25:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Statistics retrieved successfully\",\n    \"data\": {\n        \"totalProducts\": 7,\n        \"totalInventoryValue\": 35700,\n        \"totalDiscountedValue\": 11590,\n        \"averagePrice\": 5100,\n        \"outOfStockCount\": 0,\n        \"productsByCategory\": [\n            {\n                \"category\": \"Electronics\",\n                \"count\": 5,\n                \"totalValue\": 34100\n            },\n            {\n                \"category\": \"Tools\",\n                \"count\": 1,\n                \"totalValue\": 1500\n            },\n            {\n                \"category\": \"Test\",\n                \"count\": 1,\n                \"totalValue\": 100\n            }\n        ],\n        \"productsByType\": [\n            {\n                \"type\": \"public\",\n                \"count\": 5,\n                \"totalValue\": 33200\n            },\n            {\n                \"type\": \"private\",\n                \"count\": 2,\n                \"totalValue\": 2500\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/products/694100602ee8bc75d84f0392",
+      "id": "a5cb66af-9c4a-49d1-b753-3b6e92e72abd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "admin",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Body",
+            "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/694100602ee8bc75d84f0392",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "694100602ee8bc75d84f0392"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5136df09-3ba8-4a99-8966-10248085018a",
+          "name": "http://localhost:3000/api/products/694100602ee8bc75d84f0392",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "admin",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Body",
+                "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/694100602ee8bc75d84f0392",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "694100602ee8bc75d84f0392"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "96"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "814"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "343"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"157-9cCeEgE1PAi+3wwelWMnQDR26lc\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:26:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Product retrieved successfully\",\n    \"data\": {\n        \"_id\": \"694100602ee8bc75d84f0392\",\n        \"sku\": \"tEST-001\",\n        \"name\": \"Test Product\",\n        \"description\": \"Second product\",\n        \"category\": \"Electronics\",\n        \"type\": \"public\",\n        \"price\": 100,\n        \"discountPrice\": 80,\n        \"quantity\": 10,\n        \"createdAt\": \"2025-12-16T06:46:56.809Z\",\n        \"updatedAt\": \"2025-12-16T20:38:29.681Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+      "id": "ee228e2f-fef3-4eef-8490-aa5122395dbe",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "user",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Body",
+            "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "694101418492150bc048bc21"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "ef14c7d3-dda9-40b0-a0dc-b1ca5a2cd446",
+          "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "user",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Body",
+                "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "694101418492150bc048bc21"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "95"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "792"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "76"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4c-y8y44JAliy9kaCKBS7HzwASgu/I\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:27:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Product not found\",\n    \"error\": {\n        \"code\": \"NOT_FOUND\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+      "id": "305a1a28-c37b-407b-983c-4e0075366d9b",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "admin",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Tests Product\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "694101418492150bc048bc21"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "1b2beb57-60c4-443a-a66b-be164e950e76",
+          "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "admin",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Tests Product\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "694101418492150bc048bc21"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "89"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "432"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "342"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"156-9k/6BxddcYhvslX3p/bOI4Eb4jA\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:03:06 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"694101418492150bc048bc21\",\n        \"sku\": \"TEST-002\",\n        \"name\": \"Tests Product\",\n        \"description\": \"First product\",\n        \"category\": \"Electronics\",\n        \"type\": \"private\",\n        \"price\": 100,\n        \"discountPrice\": 80,\n        \"quantity\": 10,\n        \"createdAt\": \"2025-12-16T06:50:41.990Z\",\n        \"updatedAt\": \"2025-12-17T00:03:06.272Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+      "id": "f74f6a62-fc0f-40a9-98f8-db554c652499",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-User-Role",
+            "value": "admin",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Body",
+            "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "694101418492150bc048bc21"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "f2693b31-b7e3-4254-958e-cf96036a981c",
+          "name": "http://localhost:3000/api/products/694101418492150bc048bc21",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-User-Role",
+                "value": "admin",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Body",
+                "value": "{\"sku\": 123,\"name\": \"TV\",\"category\": \"E\",\"price\": \"cheap\",\"quantity\": -5}:",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/694101418492150bc048bc21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "694101418492150bc048bc21"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "RateLimit-Policy",
+              "value": "100;w=900"
+            },
+            {
+              "key": "RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "RateLimit-Remaining",
+              "value": "94"
+            },
+            {
+              "key": "RateLimit-Reset",
+              "value": "773"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "115"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"73-oZooQGKZ2TP6P8KTYZFOUnQ28Ew\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 17 Dec 2025 00:27:29 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Product deleted successfully\",\n    \"data\": {\n        \"id\": \"694101418492150bc048bc21\",\n        \"sku\": \"TEST-002\"\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "32953583-7991-465b-8fc4-ad7722843862",
+      "key": "baseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
